@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-
 import {
   StyledPhonebookContainer,
   StyledPhonebookTitle,
@@ -11,6 +10,7 @@ import {
 import ContactForm from './ContactForm/ContactForm';
 import Filter from './Filter/Filter';
 import ContactList from './ContactList/ContactList';
+import Message from './Message/Message';
 
 export default class Phonebook extends Component {
   state = {
@@ -57,29 +57,28 @@ export default class Phonebook extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
 
-    getfiltredContacts() {
-        const { filter, contacts } = this.state;
+  getfiltredContacts() {
+    const { filter, contacts } = this.state;
 
-        if (!filter) {
-            return contacts;
-        }
+    if (!filter) {
+      return contacts;
+    }
 
-        const normalizetFilter = filter.toLowerCase();
-        const filteredContact = contacts.filter(({ name }) => {
-            const normalizedContact = name.toLowerCase();
-            const result = normalizedContact.includes(normalizetFilter)
-            return result;
-        })
-      return filteredContact
-    };
-
-
+    const normalizetFilter = filter.toLowerCase();
+    const filteredContact = contacts.filter(({ name }) => {
+      const normalizedContact = name.toLowerCase();
+      const result = normalizedContact.includes(normalizetFilter);
+      return result;
+    });
+    return filteredContact;
+  }
 
   render() {
     const { addContacts, deliteContact } = this;
     const { filter } = this.state;
-      const changeFilter = this.changeFilter;
+    const changeFilter = this.changeFilter;
       const contacts = this.getfiltredContacts();
+      const length = this.state.contacts.length;
 
     return (
       <StyledPhonebookContainer>
@@ -87,7 +86,11 @@ export default class Phonebook extends Component {
         <ContactForm onSubmit={addContacts} />
         <StyledTitleContact>Contacts</StyledTitleContact>
         <Filter filter={filter} changeFilter={changeFilter} />
-        <ContactList items={contacts} deliteContact={deliteContact} />
+        {length > 0 ? (
+          <ContactList items={contacts} deliteContact={deliteContact} />
+            ) : (
+               <Message text ="Contact list is empty" />
+        )}
       </StyledPhonebookContainer>
     );
   }
