@@ -25,4 +25,7 @@ export const StyledPhonebookContainer = styled.div`
 `;
 export const StyledPhonebookTitle = styled.h1`
     font-size: 24px;
+`;
+export const StyledTitleContact = styled.h2`
+    font-size: 20px;
 `
