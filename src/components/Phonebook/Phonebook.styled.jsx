@@ -12,8 +12,8 @@ export const StyledPhonebookContainer = styled.div`
   }
 
   ul {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     list-style: none;
   }
 
@@ -22,10 +22,22 @@ export const StyledPhonebookContainer = styled.div`
     width: 100%;
     height: auto;
   }
+
+  max-width: 500px;
+  margin: auto;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 25px;
 `;
 export const StyledPhonebookTitle = styled.h1`
-    font-size: 24px;
+    font-size: 28px;
+    padding: 15px 0px;
+    margin-bottom: 30px;
+    text-align: center;
 `;
 export const StyledTitleContact = styled.h2`
-    font-size: 20px;
+    font-size: 24px;
+    color: blue;
+    /* margin-bottom: 30px; */
+    text-align: center;
 `
