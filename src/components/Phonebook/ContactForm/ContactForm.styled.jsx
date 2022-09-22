@@ -12,7 +12,7 @@ export const StyledLabel = styled.label`
 
 export const StyledInput = styled.input`
   padding: 10px;
-  width: 400px;
+  max-width: 400px;
   margin: auto;
   box-sizing: border-box;
   border: 2px solid #ccc;

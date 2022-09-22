@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledContactList = styled.ul`
-    width: 500px;
+    max-width: 500px;
     margin: auto;
     padding: 0;
  `;

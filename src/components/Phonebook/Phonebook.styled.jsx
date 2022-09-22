@@ -12,8 +12,6 @@ export const StyledPhonebookContainer = styled.div`
   }
 
   ul {
-    /* margin: 0;
-    padding: 0; */
     list-style: none;
   }
 

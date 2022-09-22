@@ -6,7 +6,7 @@ export const StyledSearchLabel = styled.label`
 `;
 export const StyledSearchInput = styled.input`
   padding: 10px;
-  width: 400px;
+  max-width: 400px;
   margin: auto;
   margin-bottom: 25px;
   box-sizing: border-box;
@@ -21,7 +21,8 @@ export const StyledSearchInput = styled.input`
   }
 `;
 export const StyledSearchWrapper = styled.div`
-  width: 500px;
+  margin: auto;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
