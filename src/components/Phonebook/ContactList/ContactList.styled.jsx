@@ -24,6 +24,12 @@ export const StyledContactDel = styled.button`
   border: none;
   color: red;
   background-color: #ffffff;
+  :focus {
+    scale: 1.2;
+  }
+  :hover {
+    scale: 1.2;
+  }
 `;
 export const StyledContactIcon = styled.span`
     color: blue;
